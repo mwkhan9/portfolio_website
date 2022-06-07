@@ -505,6 +505,7 @@ body{
     color: white;
     border-radius: 5px 5px 5px 5px;
     border: none;
+    text-align: center;
 }
 .contact:hover{
     opacity: 0.7;
