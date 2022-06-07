@@ -505,8 +505,8 @@ body{
 }
 
 .contact{
-    width: 80px;
-    height: 80px;
+    width: fit-content;
+    height: fit-content;
     text-decoration: none;
     font-size: 20px;
     color: white;
