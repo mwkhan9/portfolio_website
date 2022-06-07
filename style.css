@@ -490,6 +490,7 @@ body{
 .connectContent{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .app{
@@ -512,22 +513,28 @@ body{
 
 #linkedIn {
     background-color: #125688;
-    align-self: center;
 }
 
 #git {
     background-color: black;
-    align-self: center;
 }
 
 #mail{
     background-color: black;
-    align-self: center;
 }
 
 .icons{
     font-size: 50px;
 }
+
+@media only screen and (max-width: 600px) {
+    .app{
+        padding: 0px;
+        padding-top: 50px;
+
+    }
+}
+
 /*                                    END Connect Section           */
 
 footer{
