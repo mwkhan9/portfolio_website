@@ -512,7 +512,6 @@ body{
     color: white;
     border-radius: 5px 5px 5px 5px;
     border: none;
-    margin: 5%;
 }
 .contact:hover{
     opacity: 0.7;
@@ -537,9 +536,8 @@ body{
 
 @media only screen and (max-width: 600px) {
     .app{
-        padding: 0px;
-        padding-top: 50px;
-
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
