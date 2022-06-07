@@ -339,9 +339,7 @@ body{
     .skills{
         grid-template-columns: auto auto;
     }
-    .profile{
-        display: none;
-    }
+
 }
 
 @media only screen and (max-width: 400px) {
