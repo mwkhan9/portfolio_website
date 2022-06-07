@@ -20,25 +20,39 @@
 
     <!-- navHeader for Small screens -->
     <header id ="navHeader" class="navHeader">
-        <a href="javascript:void(0)" class="navMenu" onclick=""><i class=" fa fa-bars"></i></a>
+        <a href="javascript:void(0)" class="navMenu" onclick="openSidebar()"><i class=" fa fa-bars"></i></a>
         <span>Waseh Khan</span>
     </header>
 
+    <!-- Sidebar/menu -->
+    <nav class=" sideBar"  id="sidebar"><br>
+        <a href="javascript:void(0)" onclick="closeSidebar()" class="menuClose"><i class=" fa fa-close"></i></a>
 
+        <div class="menuItems">
+            <a href="#home" onclick="closeSidebar()" class="sidebarBtn">Home</a> 
+            <a href="#aboutSection" onclick="closeSidebar()" class="sidebarBtn">About</a> 
+            <a href="#projectSection" onclick="closeSidebar()" class="sidebarBtn">Projects</a> 
+            <a href="#contactSection" onclick="closeSidebar()" class="sidebarBtn">Contact</a> 
+            <button class ="sidebarToggleMode" onclick="toggleDark()" id="sidebarMode">Dark Mode</button>
+        </div>
+    </nav>
 
+    <!-- Overlay effect -->
+    <div id="overlay"class="overlay" onclick="closeSidebar()"></div>
 
 
     <!--  Home page  -->
     <div class="main" id="home">
-        <h1 id="title"class="title"><span class="hideSmallTxt">I'm </span>Waseh Khan</h1>
-        <p id="subTitle"class="sub-title">Computer Sceince <span class="autoType"></span></p>
-
+        <h1 id="title"class="title"><span class="highlightSideLeft">[</span><span class="hideSmallTxt"> Hello, I'm </span>Waseh Khan</h1>
+        <p id="subTitle"class="sub-title">Computer Sceince <span class="autoType"></span><span class="highlightSideRight"> ]</span></p>
         <img id ="mainImg" src ="meDrk2.jpg" class="mainImg"></img>
     </div>
 
     <!--  About page  -->
     <div id ="aboutSection"class="sectionAboutme">
-        <h1 id ="aboutHeading" class="headings">ABOUT ME</h1>
+        <div class="headingContainer aboutHeadingContainer">
+            <h1 id ="aboutHeading" class="headings">ABOUT ME</h1>
+        </div>
         
         <div class="aboutContainer">
             <p class="aboutText">Hi, I'm Waseh a 1st year Computer Science Student at UCL. I aim to apply all my skills and to 
@@ -57,13 +71,32 @@
                 <li class="lang">Java</li>
                 <li class="lang">C</li>
                 <li class="lang">Haskell</li>
+                <li class="lang">Django</li>
             </ul>
         </div>
     </div>
 
     <!--  Projects page  -->
     <div class="sectionProject" id="projectSection">
-        <h1 id ="projectHeading" class="headings">PROJECTS</h1>
+        <div class="headingContainer projectHeadingContainer">
+            <h1 id ="projectHeading" class="headings">PROJECTS</h1>
+        </div>
+
+        <div style="display: inline-flex; padding-top: 5%;">
+            <div class="card">
+                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+                
+                <div class="container">
+                    <p id="card">This is a certificate to prove that I am officially 
+                    a brown belt (1 Tag). It was very difficult to obtain 
+                    especially as I had to memorise blocks which I hadn't 
+                    learnt in my previous karate group.</p>
+                </div>
+                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+            </div>
+            
+            <img src="comp.JPG" class="projImg">
+        </div>
        
         <div class="projectBlock">
             <div class="card">
@@ -77,14 +110,42 @@
                 </div>
                 <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
             </div>
+
+            <div class="card">
+                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+                
+                <div class="container">
+                    <p id="card">This is a certificate to prove that I am officially 
+                    a brown belt (1 Tag). It was very difficult to obtain 
+                    especially as I had to memorise blocks which I hadn't 
+                    learnt in my previous karate group.</p>
+                </div>
+                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+            </div>
+
+            <div class="card">
+                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+                
+                <div class="container">
+                    <p id="card">This is a certificate to prove that I am officially 
+                    a brown belt (1 Tag). It was very difficult to obtain 
+                    especially as I had to memorise blocks which I hadn't 
+                    learnt in my previous karate group.</p>
+                </div>
+                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+            </div>
+                
         </div>
 
 
     </div>
 
     <!--  Contact page  -->
-    <div id="connectSection"class="sectionConnect">
-        <h1 id ="connectHeading" class="headings">CONTACT</h1>
+    <div id="contactSection"class="sectionContact">
+        <div class="headingContainer connectHeadingContainer">
+            <h1 id ="contactHeading" class="headings">CONTACT</h1>
+        </div>
+    
         <div class ="connectContent">
             <div class = "app"><button id="linkedIn" class ="contact icons"><i class="fa fa-linkedin-square"></i></button></div>
             <div class = "app"><button id = "git" class ="contact icons"><i class="fa fa-github-square"></i></button></div>
@@ -107,17 +168,37 @@
         })
     </script>
 
+    <!--  Script to open and close sidebar  -->
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+        
+        function closeSidebar() {
+            document.getElementById("sidebar").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+
+    <!--  Script to toggle light/dark Mode  -->
     <script>
         const mode = document.getElementById("mode");
+        const mode2 = document.getElementById("sidebarMode");
+
         function toggleDark(){
             if (mode.innerText==="Dark Mode"){
                 mode.innerText="Light Mode";
+                mode2.innerText="Light Mode";
                 
                 document.getElementById("mainImg").src = "meLgt2.jpg";
             }
             else{
-                mode.innerText="Dark Mode"
-                document.getElementById("mainImg").src = "meDrk2.jpg"
+                mode.innerText="Dark Mode";
+                mode2.innerText="Dark Mode";
+
+
+                document.getElementById("mainImg").src = "meDrk2.jpg";
             }
 
             //Background
@@ -146,8 +227,8 @@
             document.getElementById("projectHeading").classList.toggle("lightHeading");
 
             //Contact Page
-            document.getElementById("connectSection").classList.toggle("lightContact");
-            document.getElementById("connectHeading").classList.toggle("lightHeading");
+            document.getElementById("contactSection").classList.toggle("lightContact");
+            document.getElementById("contactHeading").classList.toggle("lightHeading");
         };
 
     </script>

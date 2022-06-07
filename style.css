@@ -18,7 +18,7 @@ body{
     opacity: 0.7;
     overflow: hidden;
     display: inline-block;
-    z-index: 1000;
+    z-index: 2;
 }
 .navigationBar:hover{
     opacity: 1;
@@ -92,12 +92,92 @@ body{
         overflow: hidden;
         display: inline-block;
         color: aliceblue;
-        z-index: 1000;
+        z-index: 2;
     }
 }
 
+/*                                  SideBar Overlay                                  */
+.sideBar{
+    z-index: 3;
+    width:  50%;
+    font-weight: bold;
+    display: none;
+    background-color: #9B9B9B;
+    height: 100%;
+    position: fixed;
+}
 
+.menuClose{
+    position: absolute;
+    top:0;
+    color: #07090b;
+    font-size: 20px;
+    width: 40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.menuClose:hover{
+    background-color: red;
+    color: white;
+}
 
+.menuItems{
+    width: 100%;
+    display: block;
+    padding-top: 25%;
+    margin-left: 10%;
+
+}
+
+.sidebarBtn{
+    display: block;
+    width: 80%;
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.sidebarBtn:hover{
+    background-color: #D2D2D2;
+    color: black;
+}
+
+.sidebarToggleMode{
+    width: 80%;
+    height: 30px;
+    text-decoration: none;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+	outline: 0;
+	color: white;
+	background-color: black;
+	text-align: center;
+	cursor: pointer;
+	font-size: 18px;
+    opacity: 0.7;
+}
+.sidebarToggleMode:hover{
+    opacity: 1;
+    background-color: white;
+    color: black;
+}
+
+.overlay{
+    position:fixed;
+    z-index: 2;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.5);
+    display: none;
+}
 
 /*                                  Home Page                                  */
 .main{
@@ -115,7 +195,7 @@ body{
     font-size: 50px;
     font-family: sans-serif;
     position: absolute;
-    z-index: 500;
+    z-index: 1;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -124,7 +204,7 @@ body{
 .sub-title{
     position: absolute;
     color: white;
-    z-index: 500;
+    z-index: 1;
     top: 25%;
     text-align: center;
     font-size: 20px;
@@ -137,10 +217,20 @@ body{
 
 .mainImg{
     position: absolute;
-    padding-top: 200px;
+    padding-top: 300px;
     vertical-align: middle;
     width: auto;
     height: 100%;
+}
+
+.highlightSideLeft{
+    color: #7ec636;
+    font-size: 60px;
+}
+
+.highlightSideRight{
+    color: #7ec636;
+    font-size: 30px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -154,6 +244,21 @@ body{
 
 
 /*                                      About Section           */
+.headingContainer{
+    margin-left: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutHeadingContainer{
+    border-style: solid;
+    border-color: #007aff;
+    box-shadow: -10px 10px 0px 1px  black,-15px 15px 0px 1px  #03468F;
+    border-width: 5px;
+}
+
 
 .sectionAboutme{
     padding-top: 10px;
@@ -167,7 +272,7 @@ body{
 }
 
 .headings{
-    padding-left: 100px;
+    /*padding-left: 100px;*/
     color: white;
     font-family: sans-serif;
 }
@@ -218,8 +323,12 @@ body{
 }
 
 @media only screen and (max-width: 600px) {
-    .headings, .aboutContainer, .aboutList {
+    .aboutContainer, .aboutList {
         padding-left: 10px;
+    }
+
+    .headingContainer{
+        margin-left: 20px;
     }
 
     .skills{
@@ -254,11 +363,18 @@ body{
     margin-bottom: 100px;
 }
 
+.projectHeadingContainer{
+    border-style: solid;
+    border-color: orange;
+    box-shadow: -10px 10px 0px 1px  black,-15px 15px 0px 1px  #ae8e1c;
+    border-width: 5px;
+}
+
 
 /* Start of Id card */
 .projectBlock{
-    padding-top: 15px;
-    display: inline-block;
+    padding-top: 35px;
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -310,9 +426,24 @@ body{
 }
 /* End of Id card */
 
-@media only screen and (max-width: 340px) {
+.projImg { 
+    width: 500px; 
+    height: 500px; 
+    border-radius: 50%; 
+    margin-left:55%;
+    position: absolute;
+
+}
+
+@media only screen and (max-width: 400px) {
     .card {
-        margin-left: 0px;
+        margin-left: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .projImg{
+        display: none;
     }
 }
 
@@ -320,10 +451,17 @@ body{
 
 
 
-/*                                      Connect Section           */
-.sectionConnect{
+/*                                      Contact Section           */
+.sectionContact{
     background-color: #07090b;
     padding-top: 50px;
+}
+
+.connectHeadingContainer{
+    border-style: solid;
+    border-color: #86cd82;
+    box-shadow: -10px 10px 0px 1px  black,-15px 15px 0px 1px  #49704c;
+    border-width: 5px;
 }
 
 .connectContent{
@@ -399,4 +537,5 @@ footer{
 
 .lightContact{
     background-color: #DBE0E3;
+    color: black;
 }
