@@ -3,13 +3,13 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: Mohave;
 }
 
 /*                                  Navigation Bar - LargeScreens                                  */
 .navigationBar {
     top: 0px;
     background-color: black;
-    position: relative;
     text-align: center;
     font-size: 25px;
     font-family: monospace;
@@ -193,7 +193,7 @@ body{
 .title{
     text-align: center;
     font-size: 50px;
-    font-family: sans-serif;
+    font-family: Sora;
     position: absolute;
     z-index: 1;
     top: 15%;
@@ -207,17 +207,17 @@ body{
     z-index: 1;
     top: 25%;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: Redwing;
 }
 
 .autoType{
     color: orange;
-    font-family: 'Parisienne', cursive;
 }
 
 .mainImg{
     position: absolute;
-    padding-top: 300px;
+    padding-top: 320px;
     vertical-align: middle;
     width: auto;
     height: 100%;
@@ -237,8 +237,11 @@ body{
     .hideSmallTxt {
         display: none;
     }
-    .title{
+    .title,.highlightSideLeft{
         font-size: 25px;
+    }
+    .sub-title,.highlightSideRight{
+        font-size: 20px;
     }
 }
 
@@ -289,7 +292,7 @@ body{
 }
 
 .profile { 
-	background-image: url(img/IMG_1063.jpg);
+	background-image: url(img/bg.JPG);
     background-repeat: no-repeat;
     border-radius: 50%;
 	width: 350px; 
@@ -305,7 +308,6 @@ body{
 .aboutList{
     padding-top: 15px;
     padding-left: 200px;
-    font-family: monospace;
     font-size: 15px;
 }
 
@@ -314,6 +316,7 @@ body{
     display: grid;
     grid-template-columns: auto auto auto;
     flex-wrap: wrap;
+    font-family: Basement-Grotesque;
 }
 
 .lang{
@@ -373,7 +376,7 @@ body{
 
 /* Start of Id card */
 .projectBlock{
-    padding-top: 35px;
+    padding-top: 70px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -388,6 +391,9 @@ body{
 	float: left;
     background-color: white;
     color: black;
+    height: fit-content;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .card:hover {
@@ -403,7 +409,7 @@ body{
 	padding: 2px 16px;
 }
 
-.cardBtn {
+.cardHalfBtn {
 	border: none;
 	outline: 0;
 	display: inline-block;
@@ -416,14 +422,28 @@ body{
 	font-size: 18px;
 }
 
+.cardHalfBtn:hover{
+    opacity: 0.7;
+  }
+
+.cardBtn {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}
+
 .cardBtn:hover{
   opacity: 0.7;
 }
 
-#card{
-    font-family: sans-serif;
-    text-align: center;
-}
+
 /* End of Id card */
 
 .projImg { 
@@ -484,6 +504,7 @@ body{
 }
 .contact:hover{
     opacity: 0.7;
+    cursor: pointer;
 }
 
 #linkedIn {
@@ -492,6 +513,11 @@ body{
 }
 
 #git {
+    background-color: black;
+    align-self: center;
+}
+
+#mail{
     background-color: black;
     align-self: center;
 }
@@ -539,3 +565,23 @@ footer{
     background-color: #DBE0E3;
     color: black;
 }
+
+/*                      Animation                      */
+.reveal{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/*  Fonts   */
+@font-face { font-family: Redwing; font-weight: medium; src: url('Fonts/Redwing/Redwing-Light.otf');}
+@font-face { font-family: Basement-Grotesque; font-weight: Bold; src: url('Fonts/basement/BasementGrotesque-Black_v1.202.otf');}
+@font-face { font-family: Sora; font-weight: semi-Bold; src: url('Fonts/Sora/Sora-VariableFont_wght.ttf');}
+@font-face { font-family: Mohave; font-weight: regular; src: url('Fonts/mohave/Mohave-Regular.otf');}
+
+

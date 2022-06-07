@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Waseh Khan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +11,9 @@
     <!-- navigationBar for large screens -->
     <div id ="navBar" class ="navigationBar">
         <a id="homeNav" class="navBtn" href="#home">Home</a>
-        <a id="aboutNav" class="navBtn" href="#aboutSection">About</a>
-        <a id="projectNav" class="navBtn" href="#projectSection">Projects</a>
-        <a id="connectNav" class="navBtn" href="#contactSection">Contact</a>
+        <a id="aboutNav" class="navBtn " href="#aboutSection">About</a>
+        <a id="projectNav" class="navBtn " href="#projectSection">Projects</a>
+        <a id="connectNav" class="navBtn " href="#contactSection">Contact</a>
         <button class ="navBtn" onclick="toggleDark()" id="mode">Dark Mode</button>
     </div>
 
@@ -43,9 +42,9 @@
 
     <!--  Home page  -->
     <div class="main" id="home">
-        <h1 id="title"class="title"><span class="highlightSideLeft">[</span><span class="hideSmallTxt"> Hello, I'm </span>Waseh Khan</h1>
-        <p id="subTitle"class="sub-title">Computer Sceince <span class="autoType"></span><span class="highlightSideRight"> ]</span></p>
-        <img id ="mainImg" src ="meDrk2.jpg" class="mainImg"></img>
+        <h1 id="title"class="title"><span class="highlightSideLeft">[ </span><span class="hideSmallTxt">Hello, I'm </span>Waseh Khan.</h1>
+        <p id="subTitle"class="sub-title">Computer Science <span class="autoType"></span><span class="highlightSideRight"> ]</span></p>
+        <img id ="mainImg" src ="img/meDrk2.jpg" class="mainImg"></img>
     </div>
 
     <!--  About page  -->
@@ -55,14 +54,15 @@
         </div>
         
         <div class="aboutContainer">
-            <p class="aboutText">Hi, I'm Waseh a 1st year Computer Science Student at UCL. I aim to apply all my skills and to 
-            develop myself and my coding abilities in order to thrive within the creative and advance computing industry.</p>
+            <p class="aboutText">Hi, I'm Waseh a 1st year Computer Science Student at UCL. I'm always looking for opportunities to be able to 
+            apply all my skills and develop myself and my coding abilities in order to thrive within the creative and advance 
+            computing industry.</p>
 
             <div class="profile"></div>
         </div>
 
         <div class="aboutList">
-            <p>Languages I've covered:</p>
+            <p>Languages I've covered -</p>
             <ul class="skills">
                 <li class="lang">HTML</li>
                 <li class="lang">CSS</li>
@@ -83,56 +83,52 @@
         </div>
 
         <div style="display: inline-flex; padding-top: 5%;">
-            <div class="card">
-                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+            <div class="card reveal">
+                <img src="img/EPR.png" alt="EPR" class="cardImg">
                 
                 <div class="container">
-                    <p id="card">This is a certificate to prove that I am officially 
-                    a brown belt (1 Tag). It was very difficult to obtain 
-                    especially as I had to memorise blocks which I hadn't 
-                    learnt in my previous karate group.</p>
+                    <p id="card">
+                        A simple application, where users can add recipe's
+                        for everyone to see. It contains a form where users can add the name, ingredients and steps of their recipes. 
+                        They will then be visible on the home page within a new card.
+                        <br><br>Skills - HTML, CSS, Django, JS, SQL
+                    </p>
                 </div>
-                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+                <a href="https://khanw9.pythonanywhere.com" target="_blank"><p><button class="cardHalfBtn">Site</button></a><a href="https://github.com/mwkhan9/Easy-Peel-Recipes" target="_blank"><button class="cardHalfBtn">Git</button></a></p>
             </div>
             
-            <img src="comp.JPG" class="projImg">
+            <img src="img/comp.JPG" class="projImg">
         </div>
        
         <div class="projectBlock">
-            <div class="card">
-                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+            <div class="card reveal">
+                <img src="img/library.png" alt="Library Management Project" class="cardImg">
                 
                 <div class="container">
-                    <p id="card">This is a certificate to prove that I am officially 
-                    a brown belt (1 Tag). It was very difficult to obtain 
-                    especially as I had to memorise blocks which I hadn't 
-                    learnt in my previous karate group.</p>
+                    <p id="card">This is a library management application. It was created with a python backend and 
+                        a fronted implemented using Tkinter. This software, is used to allow library staff/users to login and 
+                        provides two different interfaces, dependent on the type of user.
+                        Functions include, taking out/returning items (books/DVDs/magazines etc.), billing users,
+                        searching for items, adding members and items and much more.
+                        <br><br>Skills - Python
+                    </p>
                 </div>
-                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+                <a href="https://github.com/mwkhan9/library-management-tool" target="_blank"><p><button class="cardBtn">Git</button></p></a>
             </div>
 
-            <div class="card">
-                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+            <div class="card reveal">
+                <img src="img/simpliphi.png" alt="SimpliPhi Project" class="cardImg">
                 
                 <div class="container">
-                    <p id="card">This is a certificate to prove that I am officially 
-                    a brown belt (1 Tag). It was very difficult to obtain 
-                    especially as I had to memorise blocks which I hadn't 
-                    learnt in my previous karate group.</p>
+                    <p id="card">This was a group project - in which we were tasked with creating a study tool for students, 
+                        on a module of our choice. SimpliPhi - is a propositional logic calculator which provides a GUI 
+                        created using python's Tkinter module. The tool allows questions to be entered via either a '.txt' file
+                        or through direct input.
+                        The application tests students on their ability to convert propositional statements to DNF form OR andOrNot form.
+                        <br><br>Skills - Python
+                    </p>
                 </div>
-                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
-            </div>
-
-            <div class="card">
-                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
-                
-                <div class="container">
-                    <p id="card">This is a certificate to prove that I am officially 
-                    a brown belt (1 Tag). It was very difficult to obtain 
-                    especially as I had to memorise blocks which I hadn't 
-                    learnt in my previous karate group.</p>
-                </div>
-                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+                <a href="https://github.com/mwkhan9/SimpliPhi" target="_blank"><p><button class="cardBtn">Git</button></p></a>
             </div>
                 
         </div>
@@ -147,8 +143,9 @@
         </div>
     
         <div class ="connectContent">
-            <div class = "app"><button id="linkedIn" class ="contact icons"><i class="fa fa-linkedin-square"></i></button></div>
-            <div class = "app"><button id = "git" class ="contact icons"><i class="fa fa-github-square"></i></button></div>
+            <div class = "app"><a href="mailto:knwaseh@gmail.com"><button id="mail" class ="contact icons"><i class="fa fa-envelope"></i></button></a></div>
+            <div class = "app"><a href="https://www.linkedin.com/in/muhammad-waseh-khan-705071222" target="_blank"><button id="linkedIn" class ="contact icons"><i class="fa fa-linkedin-square"></i></button></a></div>
+            <div class = "app"><a href="https://github.com/mwkhan9" target="_blank"><button id = "git" class ="contact icons"><i class="fa fa-github-square"></i></button></a></div>
         </div>
     </div>
 
@@ -191,14 +188,14 @@
                 mode.innerText="Light Mode";
                 mode2.innerText="Light Mode";
                 
-                document.getElementById("mainImg").src = "meLgt2.jpg";
+                document.getElementById("mainImg").src = "img/meLgt2.jpg";
             }
             else{
                 mode.innerText="Dark Mode";
                 mode2.innerText="Dark Mode";
 
 
-                document.getElementById("mainImg").src = "meDrk2.jpg";
+                document.getElementById("mainImg").src = "img/meDrk2.jpg";
             }
 
             //Background
@@ -230,6 +227,28 @@
             document.getElementById("contactSection").classList.toggle("lightContact");
             document.getElementById("contactHeading").classList.toggle("lightHeading");
         };
+
+    </script>
+
+    <!--  Script for projects reveal animation  -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
 
     </script>
 
