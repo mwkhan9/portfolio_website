@@ -1,0 +1,341 @@
+body{
+    background-color: #DBE0E3;
+    margin: 0;
+    padding: 0;
+}
+
+.top{
+    padding-bottom: 200px;
+}
+
+
+.navigationBar {
+    top: 0px;
+    background-color: #DBE0E3;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-family: monospace;
+    position: fixed;
+    width: 100%;
+    opacity: 0.7;
+    overflow: hidden;
+    display: inline-block;
+}
+.navigationBar:hover{
+    opacity: 1;
+} 
+
+.navigation{
+    width: 20%;
+    text-decoration: none;
+    color: black;
+    float: left;
+    display: block;
+}
+.navigation:hover{
+    opacity: 1;
+    background-color: grey;
+
+}
+
+.navBtn{
+    border: none;
+	outline: 0;
+	display: inline-block;
+	color: white;
+	background-color: black;
+	text-align: center;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.navBtn:hover{
+    opacity: 0.7;
+}
+
+.title{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 200px;
+    font-family: sans-serif;
+}
+
+.animate{
+    color: blue;
+}
+.animates{
+    color: red;
+    animation-name: gradient;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gradient {
+    0%   {color:red;}
+    25%  {color:yellow;}
+    50%  {color:blue;}
+    75%  {color:#8BC34A;}
+    100% {color:red; }
+}
+
+.sub-title{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+
+.autoType{
+    color: orange;
+    font-family: 'Parisienne', cursive;
+}
+
+.headings{
+    padding-left: 200px;
+    color: darkblue;
+    font-family: sans-serif;
+
+}
+
+/*                                      About Section           */
+.sectionAboutMe{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    font-size: 18px;
+}
+
+.content{
+    padding-left:300px;
+}
+
+.aboutText{
+    color:#8c8c8c; 
+    height: 300px;
+    display: flex;
+    align-items: center;
+
+}
+
+.text{
+    width:75%;
+}
+
+.profile { 
+	background-image: url(img/IMG_1063.jpg);
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 5px 5px;
+    padding-right: 200px;
+	width: 300px; 
+	height:350px;
+	opacity:0.7;
+    margin-left: 100px;
+    align-self: justo;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.profile:hover {
+	opacity: 1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.skills{
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-wrap: wrap;
+
+}
+
+.lang{
+    padding-left: 10px;
+    padding-top: 20px;
+    font-family: monospace;
+    float: left;
+}
+/*                                    END  About Section           */
+
+
+
+
+/*                                      Project Section           */
+.sectionProject{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 300px;
+    width: 100%;
+}
+
+
+/* Start of Id card */
+.projectBlock{
+    padding-top: 15px;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.card {
+	box-shadow: 10px 20px 20px 10px rgba(0, 0, 0, 0.541);
+	transition: 0.3s;
+	width: 300px;
+	border-radius: 5px;
+	margin-left: 55px;
+	margin-top: 5px;
+	float: left;
+    background-color: white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cardImg {
+	border-radius: 5px 5px 0 0;
+    width: 300px;
+}
+
+.container{
+	padding: 2px 16px;
+}
+
+.cardBtn {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	cursor: pointer;
+	width: 50%;
+	font-size: 18px;
+}
+
+.cardBtn:hover{
+  opacity: 0.7;
+}
+
+#card{
+    font-family: sans-serif;
+    text-align: center;
+}
+/* End of Id card */
+
+
+/*                                 END   Project Section           */
+
+
+/*                                      Connect Section           */
+.sectionConnect{
+    background-color: white;
+    padding-top: 50px;
+}
+
+.connectContent{
+    display: flex;
+    justify-content: center;
+}
+
+.app{
+    padding: 50px;
+}
+
+.contact{
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+}
+.contact:hover{
+    opacity: 0.7;
+}
+
+#linkedIn {
+    background-color: #125688;
+    align-self: center;
+}
+
+#git {
+    background-color: black;
+    align-self: center;
+}
+
+.icons{
+    font-size: 50px;
+}
+/*                                    END Connect Section           */
+
+footer{
+    background-color: black;
+    height: 200px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+}
+
+.smallprint{
+    padding-top: 100px;
+}
+
+
+
+
+
+/*                                                      DARK MODE                                                      */
+
+.darkbg{
+    background-color: #292F35;
+    color: white;
+}
+
+.darkTop{
+    color: #B2BCC4;
+}
+
+.darkHeadings{
+    color: #91ADC2;
+}
+
+.darkSection{
+    background-color: #20262A;
+}
+
+.darkCard{
+    color: black;
+}
+
+/*                                                      RESIZING                                                      */
+
+/* Use a media query to add a break point at 800px: */
+
+
+@media screen and (max-width: 1500px) {
+    .headings, .content{
+      padding-left: 50px;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    .profile{
+        margin-left: 0px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .profile{
+        display: none;
+    }
+  }
+
+
+
+  @media screen and (max-width: 400px) {
+    .skills{
+        grid-template-columns: auto;
+    }
+  }

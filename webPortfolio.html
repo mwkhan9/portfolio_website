@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waseh Khan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class ="navigationBar">
+        <a id="aboutNav" class="navigation" href="#aboutSection">About</a>
+        <a id="projectNav" class="navigation" href="#projectSection">Projects</a>
+        <a id="achievmentsNav" class="navigation" href="#achievments">Achievments</a>
+        <a id="connectNav" class="navigation" href="#connectSection">Contact</a>
+
+        <button onclick="myFunction()">Toggle dark mode</button>
+    </div>
+
+    <div class="top">
+        <h1 class="title"><span class="animate">Hello</span>, I'm Waseh khan</h1>
+        <p class="sub-title">Hello <span class="autoType"></span></p>
+    </div>
+
+    <div id ="aboutSection"class="sectionAboutMe">
+        <h1 id ="aboutHeading" class="headings">ABOUT ME</h1>
+        <div class = "content">
+            <div class="aboutText">
+                <p class="text">Hi, I'm Waseh a 1st year Computer Science Student at UCL. I aim to apply all my skills and to develop myself and my coding abilities in order to thrive within the creative and advance computing industry.</p>
+                <div class="profile"></div>
+            </div>
+
+            <p style="padding-top: 15px;">Languages I've covered:</p>
+            <ul class="skills">
+                <li class="lang">HTML</li>
+                <li class="lang">CSS</li>
+                <li class="lang">Python</li>
+                <li class="lang">JavaScript</li>
+                <li class="lang">Java</li>
+                <li class="lang">C</li>
+                <li class="lang">Haskell</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="sectionProject" id="projectSection">
+        <h1 id ="projectHeading" class="headings">PROJECTS</h1>
+       
+        <div class="projectBlock">
+            <div class="card">
+                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+                
+                <div class="container">
+                    <p id="card">This is a certificate to prove that I am officially 
+                    a brown belt (1 Tag). It was very difficult to obtain 
+                    especially as I had to memorise blocks which I hadn't 
+                    learnt in my previous karate group.</p>
+                </div>
+                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+            </div>
+        </div>
+
+        <div class="projectBlock">
+            <div class="card">
+                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+                
+                <div class="container">
+                    <p id="card">This is a certificate to prove that I am officially 
+                    a brown belt (1 Tag). It was very difficult to obtain 
+                    especially as I had to memorise blocks which I hadn't 
+                    learnt in my previous karate group.</p>
+                </div>
+                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+            </div>
+        </div>
+
+        <div class="projectBlock">
+            <div class="card">
+                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+                
+                <div class="container">
+                    <p id="card">This is a certificate to prove that I am officially 
+                    a brown belt (1 Tag). It was very difficult to obtain 
+                    especially as I had to memorise blocks which I hadn't 
+                    learnt in my previous karate group.</p>
+                </div>
+                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+            </div>
+        </div>
+
+        <div class="projectBlock">
+            <div class="card">
+                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+                
+                <div class="container">
+                    <p id="card">This is a certificate to prove that I am officially 
+                    a brown belt (1 Tag). It was very difficult to obtain 
+                    especially as I had to memorise blocks which I hadn't 
+                    learnt in my previous karate group.</p>
+                </div>
+                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="connectSection"class="sectionConnect">
+        <h1 id ="connectHeading" class="headings">CONTACT</h1>
+        <div class ="connectContent">
+            <div class = "app"><button id="linkedIn" class ="contact icons"><i class="fa fa-linkedin-square"></i></button></div>
+            <div class = "app"><button id = "git" class ="contact icons"><i class="fa fa-github-square"></i></button></div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="smallprint">Copyright &copy; 2022 Muhammad Waseh khan</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".autoType",{
+            strings: ["World!","Everyone!","Readers!"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+    </script>
+
+    <script>
+        function myFunction() {
+        //Background
+        var element = document.body;
+        element.classList.toggle("darkbg");
+
+        //Header
+        var element = document.getElementById("aboutNav")
+        element.classList.toggle("darkTop");
+
+        var element = document.getElementById("projectNav")
+        element.classList.toggle("darkTop");
+        
+        var element = document.getElementById("achievmentsNav")
+        element.classList.toggle("darkTop");
+        
+        var element = document.getElementById("connectNav")
+        element.classList.toggle("darkTop");
+
+        //Headings
+        var element = document.getElementById("aboutHeading")
+        element.classList.toggle("darkHeadings");
+
+        var element = document.getElementById("projectHeading")
+        element.classList.toggle("darkHeadings");
+
+        var element = document.getElementById("connectHeading")
+        element.classList.toggle("darkHeadings");
+
+        //Sections
+        var element = document.getElementById("aboutSection")
+        element.classList.toggle("darkSection");
+
+        var element = document.getElementById("connectSection")
+        element.classList.toggle("darkSection");
+
+        //card
+        var element = document.getElementById("card")
+        element.classList.toggle("darkCard");
+    }
+    </script>
+
+</body>
+</html>
