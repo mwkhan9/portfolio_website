@@ -236,12 +236,10 @@ body{
     font-size: 30px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .hideSmallTxt {
         display: none;
     }
-}
-@media only screen and (max-width: 800px) {
     .title,.highlightSideLeft{
         font-size: 25px;
     }
