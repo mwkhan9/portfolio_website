@@ -10,29 +10,147 @@
 <body>
     
     <!-- navigationBar for large screens -->
-    <div class ="navigationBar">
+    <div id ="navBar" class ="navigationBar">
         <a id="homeNav" class="navBtn" href="#home">Home</a>
         <a id="aboutNav" class="navBtn" href="#aboutSection">About</a>
         <a id="projectNav" class="navBtn" href="#projectSection">Projects</a>
         <a id="connectNav" class="navBtn" href="#contactSection">Contact</a>
-        <button class ="navBtn" onclick="myFunction()">Dark mode</button>
+        <button class ="navBtn" onclick="toggleDark()" id="mode">Dark Mode</button>
     </div>
 
     <!-- navHeader for Small screens -->
-    <header class="navHeader">
+    <header id ="navHeader" class="navHeader">
         <a href="javascript:void(0)" class="navMenu" onclick=""><i class=" fa fa-bars"></i></a>
         <span>Waseh Khan</span>
     </header>
 
-    <!--  1st page  -->
+
+
+
+
+    <!--  Home page  -->
     <div class="main" id="home">
-        <h1 class="title"><span class="hideSmallTxt">I'm </span>Waseh Khan</h1>
-        <img src ="comp.JPG" class="mainImg"></img>
+        <h1 id="title"class="title"><span class="hideSmallTxt">I'm </span>Waseh Khan</h1>
+        <p id="subTitle"class="sub-title">Computer Sceince <span class="autoType"></span></p>
+
+        <img id ="mainImg" src ="meDrk2.jpg" class="mainImg"></img>
     </div>
 
-    <div class="main" id="home">
+    <!--  About page  -->
+    <div id ="aboutSection"class="sectionAboutme">
+        <h1 id ="aboutHeading" class="headings">ABOUT ME</h1>
+        
+        <div class="aboutContainer">
+            <p class="aboutText">Hi, I'm Waseh a 1st year Computer Science Student at UCL. I aim to apply all my skills and to 
+            develop myself and my coding abilities in order to thrive within the creative and advance computing industry.</p>
+
+            <div class="profile"></div>
+        </div>
+
+        <div class="aboutList">
+            <p>Languages I've covered:</p>
+            <ul class="skills">
+                <li class="lang">HTML</li>
+                <li class="lang">CSS</li>
+                <li class="lang">Python</li>
+                <li class="lang">JavaScript</li>
+                <li class="lang">Java</li>
+                <li class="lang">C</li>
+                <li class="lang">Haskell</li>
+            </ul>
+        </div>
     </div>
 
+    <!--  Projects page  -->
+    <div class="sectionProject" id="projectSection">
+        <h1 id ="projectHeading" class="headings">PROJECTS</h1>
+       
+        <div class="projectBlock">
+            <div class="card">
+                <img src="img/Scans/Scan_20141212 (13).png" alt="Brown Belt (1 Tag) Karate" class="cardImg">
+                
+                <div class="container">
+                    <p id="card">This is a certificate to prove that I am officially 
+                    a brown belt (1 Tag). It was very difficult to obtain 
+                    especially as I had to memorise blocks which I hadn't 
+                    learnt in my previous karate group.</p>
+                </div>
+                <p><button class="cardBtn">Site</button><button class="cardBtn">Git</button></p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--  Contact page  -->
+    <div id="connectSection"class="sectionConnect">
+        <h1 id ="connectHeading" class="headings">CONTACT</h1>
+        <div class ="connectContent">
+            <div class = "app"><button id="linkedIn" class ="contact icons"><i class="fa fa-linkedin-square"></i></button></div>
+            <div class = "app"><button id = "git" class ="contact icons"><i class="fa fa-github-square"></i></button></div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="smallprint">Copyright &copy; 2022 Muhammad Waseh khan</p>
+    </footer>
+
+
+    <!--  script for autoTyping  -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".autoType",{
+            strings: ["Student"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+    </script>
+
+    <script>
+        const mode = document.getElementById("mode");
+        function toggleDark(){
+            if (mode.innerText==="Dark Mode"){
+                mode.innerText="Light Mode";
+                
+                document.getElementById("mainImg").src = "meLgt2.jpg";
+            }
+            else{
+                mode.innerText="Dark Mode"
+                document.getElementById("mainImg").src = "meDrk2.jpg"
+            }
+
+            //Background
+            document.body.classList.toggle("lightBody");
+
+            //Navigation
+            document.getElementById("navBar").classList.toggle("lightNavBar");
+            document.getElementById("navHeader").classList.toggle("lightNavHeader");
+                //Nav Btns
+            document.getElementById("homeNav").classList.toggle("lightNavBtn");
+            document.getElementById("aboutNav").classList.toggle("lightNavBtn");
+            document.getElementById("projectNav").classList.toggle("lightNavBtn");
+            document.getElementById("connectNav").classList.toggle("lightNavBtn");
+            document.getElementById("mode").classList.toggle("lightNavBtn");
+
+            //Home Page
+            document.getElementById("home").classList.toggle("lightMain");
+            document.getElementById("title").classList.toggle("lightTitle");
+            document.getElementById("subTitle").classList.toggle("lightSubTitle");
+
+            //About Page
+            document.getElementById("aboutSection").classList.toggle("lightAbout");
+            document.getElementById("aboutHeading").classList.toggle("lightHeading");
+
+            //Project Page
+            document.getElementById("projectHeading").classList.toggle("lightHeading");
+
+            //Contact Page
+            document.getElementById("connectSection").classList.toggle("lightContact");
+            document.getElementById("connectHeading").classList.toggle("lightHeading");
+        };
+
+    </script>
 
 </body>
 </html>
